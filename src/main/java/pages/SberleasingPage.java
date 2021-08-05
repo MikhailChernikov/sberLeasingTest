@@ -10,7 +10,7 @@ public class SberleasingPage {
 
         public WebDriver driver;
         public SberleasingPage(WebDriver driver){
-            driver.get("https://www.sberleasing.ru/");
+
             PageFactory.initElements(driver,this);
             this.driver = driver; }
 

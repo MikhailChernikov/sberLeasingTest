@@ -9,7 +9,7 @@ public class GooglePage {
 
     public WebDriver driver;
     public GooglePage(WebDriver driver){
-        driver.get("https://google.ru");
+
         PageFactory.initElements(driver,this);
         this.driver = driver; }
 
@@ -20,12 +20,18 @@ public class GooglePage {
     private WebElement searchButton;
 
 
+	@FindBy(xpath = "//h3[text()='СберЛизинг — официальный сайт лизинговой компании ...']")
+	private WebElement results;
 
     public void inputSearchField(String searchtext){
         searchField.sendKeys(searchtext); }
 
     public void clickSearchButton(){
         searchButton.click();  }
+
+    public void clickResults(){
+        results.click();
+    }
 
 
 
