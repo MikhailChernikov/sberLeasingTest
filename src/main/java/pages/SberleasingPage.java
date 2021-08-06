@@ -7,14 +7,13 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SberleasingPage {
 
-
-        public WebDriver driver;
+        private static WebDriver driver;
         public SberleasingPage(WebDriver driver){
 
-            PageFactory.initElements(driver,this);
-            this.driver = driver; }
+        PageFactory.initElements(driver,this);
+        this.driver = driver; }
 
-    @FindBy(xpath = "/html/body/div[1]/section[1]/div/div/div[3]/a")
+    @FindBy(xpath = "//a[contains(text(),"Подобрать по параметрам")]")
     private WebElement selectionButton;
 
     public void clickSearchButton(){
