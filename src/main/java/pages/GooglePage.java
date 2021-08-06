@@ -7,21 +7,20 @@ import org.openqa.selenium.support.PageFactory;
 
 public class GooglePage {
 
-    public WebDriver driver;
+    private static WebDriver driver;
     public GooglePage(WebDriver driver){
 
-        PageFactory.initElements(driver,this);
-        this.driver = driver; }
+    PageFactory.initElements(driver,this);
+    this.driver = driver; }
 
-	@FindBy(xpath="//input[@name='q']")
-	private WebElement searchField;
+    @FindBy(xpath="//input[@name='q']")
+    private WebElement searchField;
 
     @FindBy(xpath="//input[@name='btnK']")
     private WebElement searchButton;
 
-
-	@FindBy(xpath = "//h3[text()='СберЛизинг — официальный сайт лизинговой компании ...']")
-	private WebElement results;
+    @FindBy(xpath = "//h3[text()='СберЛизинг — официальный сайт лизинговой компании ...']")
+    private WebElement results;
 
     public void inputSearchField(String searchtext){
         searchField.sendKeys(searchtext); }
