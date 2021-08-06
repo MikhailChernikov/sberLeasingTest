@@ -39,22 +39,11 @@ public class TestSberLeasing {
         sberleasingPage = new SberleasingPage(driver);
         System.out.println(driver.getCurrentUrl());
         sberleasingPage.clickSearchButton();
-
-
     }
-
-    //    public void closePopupIfVisible() {
-    //      try {
-    //        driver.findElement(By.xpath("//div[@class='comagic-call-generator comagic-call-generator--left-place ']/div[5]")).click();
-    //      }
-    //     catch (Exception e) {
-
-    //  }
-    // }
 
     @AfterClass
     public static void setupAfter() {
-        //driver.quit();
+        driver.quit();
     }
 
 }
